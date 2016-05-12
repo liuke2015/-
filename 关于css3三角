@@ -1,0 +1,9 @@
+.sanjiao{
+  width:0;
+  height:0;
+  overflow:hidden;
+  
+  border-width:10px;
+  border-color:transparent transparent red transparent;
+  border-style:dashed dashed solid dashed;//为了在IE6下兼容，只有有颜色的那个方向是solid,其他方向都是dashed
+}
