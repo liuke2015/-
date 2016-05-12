@@ -7,3 +7,34 @@
   border-color:transparent transparent red transparent;
   border-style:dashed dashed solid dashed;//为了在IE6下兼容，只有有颜色的那个方向是solid,其他方向都是dashed
 }
+
+//用less方法编译
+.triangle(left,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent transparent transparent @c;
+    border-style:dashed dashed dashed solid;
+}
+.triangle(right,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent @c transparent transparent;
+    border-style:dashed solid dashed dashed;
+}
+.triangle(top,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color: @c transparent transparent transparent;
+    border-style:solid dashed dashed dashed;
+}
+.triangle(bottom,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent transparent @c transparent;
+    border-style:dashed dashed solid dashed;
+}
+.triangle(@_,@w:5px,@c:#ccc){
+    width:0;
+    height:0;
+    overflow:hidden;
+}
+
+.janjiao{
+    .triangle(left,100px)
+}
